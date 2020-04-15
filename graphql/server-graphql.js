@@ -8,8 +8,7 @@ var user = require("../user.json");
 
 // Konstruiere Schema auf Bais des GraphQL-Konzepts
 var schema = buildSchema(`
-    type Query { 
-        hello: String
+    type Query {
         user: [User]
     }
 
@@ -25,9 +24,6 @@ var schema = buildSchema(`
 
 // API-Root stellt eine Resolver-Funktion für jeden zugreifenden Endpunkt zur Verfügung
 var root = {
-    hello: () => {
-        return 'Hello World!';
-    },
     user: () => {
         return user;
     }
