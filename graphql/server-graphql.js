@@ -4,6 +4,8 @@ var express = require('express');
 var graphqlHTTP = require('express-graphql');
 var { buildSchema } = require('graphql');
 
+var allBooks = require("../books.json");
+
 var books = [
     {
         "title": "Unlocking Android",
@@ -50,7 +52,7 @@ var root = {
         return 'Hello World!';
     },
     books: () => {
-        return books;
+        return allBooks;
     }
 };
 
