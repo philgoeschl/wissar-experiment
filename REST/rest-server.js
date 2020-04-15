@@ -9,11 +9,12 @@ const express = require('express')
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-var allBooks = require("../books.json");
+//var allBooks = require("../books.json");
+var user = require("../user.json");
 
 const app = express();
 const port = 3000;
-
+/*
 // Where we will keep books
 let books = [
     {
@@ -41,7 +42,7 @@ let books = [
         "categories": ["Java"]
     }
 ];
-
+*/
 app.use(cors());
 
 // Configuring body parser middleware
@@ -50,7 +51,7 @@ app.use(bodyParser.json());
 
 
 app.get('/books', (req, res) => {
-    res.json(allBooks);
+    res.json(user);
 });
 
 app.listen(port, () => console.log(`Hello world app listening on port ${port}!`));
