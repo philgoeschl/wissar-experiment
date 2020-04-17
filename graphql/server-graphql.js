@@ -18,7 +18,7 @@ var schema = buildSchema(`
         lastName: String
         email: String
         gender: String
-        ipAdress: String
+        ipAddress: String
     }
     `);
 
